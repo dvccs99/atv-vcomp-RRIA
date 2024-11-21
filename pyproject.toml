@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "vcomp"
+version = "0.1.0"
+description = "Atividade avaliativa de visão computacional"
+authors = ["Daniel_Salvador <dvccs@softex.cin.ufpe.br>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+torch = "^2.5.1"
+tensorflow = "^2.18.0"
+torchvision = "^0.20.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
