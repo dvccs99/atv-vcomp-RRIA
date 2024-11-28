@@ -7,13 +7,24 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-torch = "^2.5.1"
 tensorflow = "^2.18.0"
-torchvision = "^0.20.1"
+torch = {version = "^2.5.1+cu124", source = "pytorch-gpu"}
+torchvision = {version = "^0.20.1+cu124", source = "pytorch-gpu"}
+torchaudio = {version = "^2.5.1+cu124", source = "pytorch-gpu"}
+keras = "^3.7.0"
+segmentation-models-pytorch = "^0.3.4"
+matplotlib = "^3.9.2"
+opencv-python = "^4.10.0.84"
 
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.5"
+
+
+[[tool.poetry.source]]
+name = "pytorch-gpu"
+url = "https://download.pytorch.org/whl/cu124"
+priority = "explicit"
 
 [build-system]
 requires = ["poetry-core"]
